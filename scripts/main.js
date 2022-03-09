@@ -1,6 +1,8 @@
 //global to keep track of the current grid size
 let currentGridSize = 16;
 
+let squares;
+
 //function to create a single square in the etch-a-sketch
 function createSquare(){
     const newSquare = document.createElement("div");
@@ -29,7 +31,7 @@ function initGrid(rows){
     }
     
     //querySelector for all of the squares in the etch-a-sketch
-    const squares = Array.from(document.querySelectorAll(".grid-square"));
+    squares = Array.from(document.querySelectorAll(".grid-square"));
 
     //event listener on each square in the etch-a-sketch to handle the "drawing" via class toggling
     squares.forEach(square => {
