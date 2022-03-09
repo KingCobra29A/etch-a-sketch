@@ -25,10 +25,21 @@ function test(rows){
 
 test(16);
 
+
+//add querySelector + eventListeners which handle the "drawing" via class toggling
 const squares = Array.from(document.querySelectorAll(".grid-square"));
 
 squares.forEach(square => {
     square.addEventListener('click', e => {
             e.target.classList.toggle("clicked-grid");
+    })
+});
+
+//add querySelector + eventListener which handles the reset of squares
+const reset = document.querySelector(".reset-button");
+
+reset.addEventListener('click', e => {
+    squares.forEach( square => {
+        square.classList.remove("clicked-grid");
     })
 });
