@@ -24,3 +24,11 @@ function test(rows){
 }
 
 test(16);
+
+const squares = Array.from(document.querySelectorAll(".grid-square"));
+
+squares.forEach(square => {
+    square.addEventListener('click', e => {
+            e.target.classList.toggle("clicked-grid");
+    })
+});

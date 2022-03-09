@@ -21,7 +21,6 @@ body {
 .grid-square {
     width: 6.25%;
     height: 100%;
-    background-color: blueviolet;
 }
 
 .unselected-square {
@@ -30,4 +29,8 @@ body {
 
 .grid-square:hover {
     background-color: aquamarine;
+}
+
+.clicked-grid {
+    background-color: yellow;
 }
