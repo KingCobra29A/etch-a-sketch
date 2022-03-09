@@ -1,6 +1,7 @@
 //global to keep track of the current grid size
 let currentGridSize = 16;
 
+//squares variable, which contains all DOM square elements, will be updated in initGrid
 let squares;
 
 //function to create a single square in the etch-a-sketch
@@ -22,6 +23,26 @@ function createRow(gridLength){
     return newRow;
 }
 
+//function to determine new sizing of each square
+//  this is used because the etch-a-sketch size is constant, but the number of squares is variable
+//  function works by setting the height of the row, and the width of the square
+//  global "squares" array is used, and query selector grabs all rows for modification
+function resizeSquares(numSquares){
+    let size = (100/numSquares).toString() + "%";
+
+    squares.forEach(square => {
+        square.style.width = size;
+    });
+
+    let rows = Array.from(document.querySelectorAll(".grid-row"));
+    rows.forEach(row => {
+        row.style.height = size;
+    });
+}
+
+
+
+
 //function to draw the initial etch-a-sketch
 const etchGrid = document.querySelector(".body-wrapper");
 
@@ -33,11 +54,14 @@ function initGrid(rows){
     //querySelector for all of the squares in the etch-a-sketch
     squares = Array.from(document.querySelectorAll(".grid-square"));
 
+    //resize the squares
+    resizeSquares(rows);
+
     //event listener on each square in the etch-a-sketch to handle the "drawing" via class toggling
     squares.forEach(square => {
         square.addEventListener('click', e => {
             e.target.classList.toggle("clicked-grid");
-        })
+        });
     });
 
 }

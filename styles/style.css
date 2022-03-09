@@ -29,12 +29,8 @@ input {
 }
 
 .grid-square {
-    width: 6.25%;
     height: 100%;
-}
-
-.unselected-square {
-
+    width: 6.25%;
 }
 
 .grid-square:hover {
