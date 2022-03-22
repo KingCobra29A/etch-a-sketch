@@ -44,7 +44,7 @@ function resizeSquares(numSquares){
 
 
 //function to draw the initial etch-a-sketch
-const etchGrid = document.querySelector(".body-wrapper");
+const etchGrid = document.querySelector(".etch-window");
 
 function initGrid(rows){ 
     for(let i = 0; i < rows; i++){

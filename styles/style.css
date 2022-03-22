@@ -9,23 +9,55 @@ body {
 
 button {
     width: 4rem;
-    margin: 2rem;
 }
 
 input {
     width: 4rem;
-    margin: 2rem;
 }
 
-.body-wrapper {
-    height: 80vh;
-    width: 80vh;
+.etch-wrapper {
+    box-shadow: 5px 5px 5px black;
+    border-radius: 10px;
+}
+
+.window-wrapper {
+    display: flex;
+}
+
+.etch-window {
+    height: 70vh;
+    width: 70vh;
+}
+
+.etch-body {
+    background-color: #B91D21;
+}
+
+.etch-top {
+    height: 10vh;
+    width: 90vh;
+    border-radius: 10px 10px 0 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.etch-side {
+    height: 70vh;
+    width: 10vh;
+}
+
+.etch-bottom {
+    height: 10vh;
+    width: 90vh;
+    border-radius: 0 0 10px 10px;
 }
 
 .grid-row {
     height: 6.25%;
     display: flex;
-    background-color: blue;
+    background-color: #C4C4C4;
 }
 
 .grid-square {
