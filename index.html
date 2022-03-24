@@ -13,14 +13,33 @@
     <div class="etch-wrapper">
         <div class="etch-body etch-top">
             <button class="reset-button" type="button">Reset</button>
-            <input class="grid-def" type="number" value="16" min="1", max="100">
+            <div>
+                <label for="grid-resolution">resolution:</label>
+                <input id="grid-resolution" class="grid-def" type="number" value="16" min="1", max="100">
+            </div>
         </div>
         <div class="window-wrapper">
-            <div class="etch-body etch-side"></div>
+            <div class="etch-body etch-side">
+                <div class="color-pick-wrapper">
+                    <input type="radio" name="color-choice" class="color-choice">
+                    <input type="color" id="color1" class="color-picker" title="Choose color 1">
+                </div>
+                <div class="color-pick-wrapper">
+                    <input type="radio" name="color-choice" class="color-choice">
+                    <input type="color" id="color2" class="color-picker" title="Choose color 2">
+                </div>
+                <div class="color-pick-wrapper">
+                    <input type="radio" name="color-choice" class="color-choice">
+                    <input type="color" id="color3" class="color-picker" title="Choose color 3">
+                </div>
+            </div>
             <div class="etch-window"></div>
             <div class="etch-body etch-side"></div>
         </div>
-        <div class="etch-body etch-bottom"></div>
+        <div class="etch-body etch-bottom">
+            <div class="knob left-knob"></div>
+            <div class="knob right-knob"></div>
+        </div>
     </div>
 </body>
 
